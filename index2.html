@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls></audio>
+
+<button class="start"> Start</button>
+<button class="stop"> Stop</button>
+
+</body>
+<script >
+    let audio=document.querySelector("audio");
+let mediaRecorder;
+let start=document.querySelector("#start");
+let Stop = document.querySelector("#stop");
+let chunk=[];
+start.addEventListener("click",(e)=>{
+mediaRecorder.start();
+});
+
+Stop.addEventListener("click",(e)=>{
+mediaRecorder.stop();
+});
+
+navigator.mediaDevices.getUserMedia({audio:true}).then((mediaStream)=>{
+            audio.srcObject=mediaStream;
+     mediaRecorder=new MediaRecorder(mediaStream);
+     mediaRecorder.addEventListener("dataavailable",(e)=>{
+chunk.push(e.data);
+     });
+
+     mediaRecorder.addEventListener("stop",(e)=>{
+          let blob=new Blob(chunk,{type : "audio/mp3"});
+          chunk=[];
+          let url= window.URL.createObjectURL(blob);
+          let a= document.createElement("a");
+          a.href=url;
+          a.download="audio.mp3";
+          a.click();
+          a.remove();
+     });
+
+
+});
+</script>
+
+</html>

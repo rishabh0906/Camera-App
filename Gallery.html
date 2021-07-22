@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+  
+    body {
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .media-container
+    {
+        height: 18rem;
+    width: 20rem;
+    border: 1px solid;
+    }
+    .media{
+        height: 80%;
+        width:100%;
+        border: 1px solid;
+    }
+    .Dld,.Dlt{
+
+        height: 10%;
+        width: 100%;
+        border: 1px solid;
+    }
+    img,video{
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <h1
+        style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 3rem;">
+        Gallery</h1>
+        <!-- <div class="media-container">
+
+            <div class="media"><video src=""></video></div>
+            <button class="Dld">Download</button>
+            <button class="Dlt">Delete</button>
+        </div> -->
+    
+</body>
+<script src="IndexDB.js"></script>
+    <script>
+        setTimeout(() => {
+            viewMedia();
+        }, 100)
+    </script>
+
+</html>

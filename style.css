@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+
+#capture,#record{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    outline:none;
+    border : 5px solid white;
+    position: fixed;
+    background-color: black;
+    z-index: 3;
+}
+
+#record{
+
+    top:30vh;
+    right:20px;
+}
+
+#capture{
+
+    top:50vh;
+    right:20px;
+}
+#video-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+video{
+
+    height: 100%;
+    width:100%;
+}
+#capture div , #record div{
+    width: 75%;
+    height: 70%;
+  
+    border-radius: 50%;
+    margin: auto;
+   
+}
+
+#record div{
+
+    background-color: red;
+}
+#record div:hover{
+
+    animation: zoom-in-out 1s;
+}
+#capture div{
+
+    background-color: white;
+}
+#capture div:hover{
+
+    animation: zoom-in-out 1s;
+}
+
+.record-animation{
+
+    animation: zoom-in-out 0.8s infinite;
+
+}
+
+.capture-animation{
+
+    animation: zoom-in-out 1s ;
+
+}
+
+@keyframes zoom-in-out{
+
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.filter-container
+{
+    height: 24rem;
+    width: 7rem;
+ z-index: 3;
+    position: fixed;
+    top: 8rem;
+    left: 1rem;
+}
+
+.filter{
+    
+        width: 7rem;
+        height: 4rem;
+     
+    background-image: url("img.png");
+    background-size: cover;
+    
+}
+
+.apply-filter{
+    height: 100vh;
+    width: 100vw;
+  z-index: 0;
+    position: fixed;
+    top: 0;
+}
+
+.zoom-container
+{
+    height: 8rem;
+    width: 5rem;
+   
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+}
+#zoom-in,#zoom-out{
+    height: calc( 100% /2 );
+    width: 100%;
+    
+    color:white;
+   text-align: center;
+   padding-top: 12px;
+}
+
+#gallery{
+    position: fixed;
+    bottom: 7rem;
+    right: 20px;
+    height: 3rem;
+    z-index: 3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+}

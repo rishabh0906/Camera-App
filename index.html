@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<body>
+
+    <div id="video-container">
+        <video autoplay></video>
+    </div>
+    <div class="filter-container">
+
+        <div class="filter" style="background-color: #e5503934 ; background-blend-mode: color-burn;"></div>
+        <div class="filter" style="background-color:#f6b83b42 ; background-blend-mode: color-burn;"></div>
+        <div class="filter" style="background-color:#4a69bd3d ; background-blend-mode: color-burn;"></div>
+        <div class="filter"  style="background-color:#82ccdd44; background-blend-mode: color-burn;"></div>
+        <div class="filter" style ="background-color:#38ada952 ; background-blend-mode: color-burn"></div>
+        <div class="filter"></div>
+    </div>
+    <div class="zoom-container">
+        <div id="zoom-in"><span class="material-icons" style="font-size: 35px;">
+            zoom_in
+            </span>
+    </div>
+        <div id="zoom-out"><span class="material-icons" style="font-size : 35px;">
+            zoom_out
+            </span></div>
+    </div>
+    <button id="record">
+        <div></div>
+    </button>
+    <button id="capture">
+        <div></div>
+    </button>
+    <button id="gallery">Gallery</button>
+
+</body>
+<script src="IndexDB.js"></script>
+<script src="script.js"></script>
+
+
+</html>

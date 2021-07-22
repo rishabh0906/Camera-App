@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        background-color: blue;
+        height: 10rem;
+        width: 10rem;
+        animation: transition;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes transition {
+        0% {
+
+            transform: rotate(180deg);
+
+        }
+
+        50% {
+
+            transform: scale(2);
+
+
+            background-color: red;
+
+
+        }
+
+        100% {
+
+            transform: rotate(180deg);
+        }
+
+    }
+</style>
+
+<body>
+    <diV> </diV>
+</body>
+
+</html>
